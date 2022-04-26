@@ -36,7 +36,7 @@
           </ul>
         </nav>
         <ul class="header-nav-contacts list">
-          <li class="item hover-item">
+          <li class="item ">
             <a href="" class="link hover-item">
               <svg class="letter-icon">
                 <use href="./images/spryte.svg#icon-envelope-hover"></use>
@@ -61,7 +61,7 @@
           <h1 class="hero-title">
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ<br />ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
-          <button type="button" class="hero-button">Заказать услугу</button>
+          <button data-modal-open type="button" class="hero-button">Заказать услугу</button>
         </div>
       </section>
       <section class="section-advantages">
@@ -124,21 +124,30 @@
           <h2 class="occupation-title">Чем мы занимаемся</h2>
           <ul class="occupation-list list">
             <li class="item">
-              <img
+              <div class="occupation-card-container">
+                <img
                 src="./images/img(14).jpg"
                 width="370"
                 alt="планшет на клавиатуре"
               />
+              <p class="occupation-text-title">ДЕСКПОТНЫЕ ПРИЛОЖЕНИЯ</p>
+              </div>
             </li>
             <li class="item">
+              <div class="occupation-card-container">
               <img
                 src="./images/img(1).jpg"
                 width="370"
                 alt="ноутбук и телефон"
               />
+              <p class="occupation-text-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p>
+            </div>
             </li>
             <li class="item">
+              <div class="occupation-card-container">
               <img src="./images/img(2).jpg" width="370" alt="планшет" />
+              <p class="occupation-text-title">ДИЗАЙНЕСКИЕ РЕШЕНИЯ</p>
+            </div>
             </li>
           </ul>
         </div>
@@ -407,5 +416,56 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div  class="modal-window">
+        <a  href="" class="modal-link" data-modal-close>
+          <svg class="modal-icon">
+            <use href="./images/spryte.svg#icon-Vectr"></use>
+          </svg>
+        </a>
+        <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <form action="" name="modal-form">
+          <label for="" class="modal-label">
+            Имя 
+            <a href="" class="modal-svg-link1 modal-svg-link">
+              <svg class="modal-svg-name"> 
+                <use href="./images/spryte.svg#icon-Vector2"></use>
+              </svg>
+            </a> 
+              <input type="text" name="name" id="name" class="form-input">           
+          </label>
+          <label for="" class="modal-label">
+            Телефон
+            <a href="" class="modal-svg-link"> 
+              <svg class="modal-svg-phone">
+                <use href="./images/spryte.svg#icon-Vector3"></use>
+              </svg>
+            </a>
+            <input type="tel" name="phone" id="phone" class="form-input">
+          </label>
+          <label for="" class="modal-label">
+            Почта 
+            <a href="" class="modal-svg-link">
+              <svg class="modal-svg-email">
+                <use href="./images/spryte.svg#icon-Vector4"></use>
+              </svg>
+            </a>
+            <input type="email" name="email" id="email" class="form-input">
+          </label>
+          <label for="" class="">
+            Комментарий
+            <textarea name="feedback" id="" cols="30" rows="10" placeholder="Введите текст"></textarea>
+          </label>
+          <label for="" class="modal-radio-label"> 
+           
+            <input type="radio" value="">
+            Соглашаюсь с рассылкой и принимаю
+            <a href="" class="modal-radio-link">Условия договора</a>
+          </label>
+          <button class="modal-submit-button">Отправить</button>
+        </form>
+        </div>
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>

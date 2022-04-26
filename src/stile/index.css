@@ -7,6 +7,8 @@
   --white-tel-em: rgba(255, 255, 255, 0.6);
   --border-color: #ececec;
   --items-color: #eeeeee;
+  --occupation-text-background: #2F303ACC;
+  ;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -24,6 +26,9 @@ li {
 }
 p {
   margin: 0px;
+}
+img {
+  display: block;
 }
 /* Стили Хедера*/
 .header-logo {
@@ -73,6 +78,25 @@ ul {
   text-decoration: none;
   padding: 32px 0px;
   display: block;
+  position: relative;
+}
+.header-nav .link::before {
+  content: "";
+  display: inline-block;
+  width: 0%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--nav-color);
+  position: absolute;
+  bottom: 0;
+ 
+  transition-property: width;
+  transition-duration: 250ms;
+  transition-delay: 0;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.header-nav .hover-item::before {
+width: 100%;
 }
 .header-nav .item {
   margin-right: 50px;
@@ -91,6 +115,9 @@ ul {
   padding: 32px 0px;
   text-decoration: none;
   display: block;
+  
+  display: flex;
+  align-items: center;
 }
 .header-nav-contacts .item {
   margin-right: 50px;
@@ -105,9 +132,17 @@ ul {
 .header-nav-contacts .hover-item {
   color: var(--nav-color);
 }
+.header-nav-contacts .hover-item:hover {
+  color: var(--primary-color);
+}
 .header-nav .link:hover,
 .header-nav .link:focus {
   color: var(--nav-color);
+}
+.header-nav .link:hover::before,
+.header-nav .link:focus::before {
+  color: var(--nav-color);
+  width: 100%;
 }
 .header-nav-contacts .link:hover,
 .header-nav-contacts .link:focus {
@@ -117,7 +152,10 @@ ul {
 .header-nav .hover-item:focus {
   color: var(--primary-color);
 }
-
+.header-nav .link:hover ,
+.header-nav .link:focus {
+  color: var(--nav-color);
+}
 .container {
   width: 1200px;
   margin-right: auto;
@@ -138,6 +176,7 @@ ul {
   height: 16px;
   margin-right: 10px;
   fill: var(--no-primary-color);
+  
 }
 .telephone-icon:hover {
   fill: var(--nav-color);
@@ -266,6 +305,23 @@ ul {
 .occupation-list .item:last-child {
   margin: 0px;
 }
+.occupation-text-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  text-align: center;
+  padding: 27px 0px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--occupation-text-background);
+  width: 100%;
+}
+.occupation-card-container {
+ position: relative;
+}
 
 /*Секция  команды */
 
@@ -332,6 +388,10 @@ ul {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+  transition-property: fill;
+  transition-delay: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .team-list-svg {
   justify-content: center;
@@ -341,6 +401,10 @@ ul {
   height: 44px;
   border-radius: 50%;
   background-color: var(--white-color);
+  transition-property: background-color;
+  transition-delay: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .team-list-svg:hover {
   background-color: var(--nav-color);
@@ -404,9 +468,17 @@ ul {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
+  transition-property: border;
+  transition-delay: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .clients-icon {
   fill: #afb1b8;
+  transition-property: fill;
+  transition-delay: 0;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .clients-link:hover {
   border-color: var(--nav-color);
@@ -462,6 +534,11 @@ ul {
   letter-spacing: 0.03em;
   color: var(--no-primary-color);
   text-decoration: none;
+
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-delay: 0;
+  transition-duration: 250ms;
 }
 .footer-list .item {
   margin-top: 9px;
@@ -490,6 +567,11 @@ ul {
   height: 44px;
   justify-content: center;
   align-items: center;
+   
+  transition-property: background-color;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition-delay: 0;
+  transition-duration: 250ms;
 }
 .footer-list-svg:hover,
 .footer-list-svg:focus {
@@ -514,3 +596,125 @@ ul {
   color: var(--white);
   margin-bottom: 20px;
 }
+/*Стили модального окна*/
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.modal-window {
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  
+}
+.container {
+  position: relative;
+}
+.modal-icon {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+}
+.modal-link {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--no-primary-color);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.modal-svg-name {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+.modal-svg-phone {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+}
+.modal-svg-email {
+  width: 15px;
+  height: 12px;
+}
+label {
+  width: 448px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px auto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: var(--no-primary-color);
+}
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+.form-input {
+  width: 448px;
+}
+.modal-svg-link {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+.modal-label { 
+  position: relative;
+  margin-bottom: 10px;
+}
+.modal-svg-link {
+  position: absolute;
+  top: 50%;
+}
+.form-input {
+  height: 40px;
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-right: 40px;
+}
+input {
+  padding-left: 42px;
+}
+textarea {
+  resize: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 448px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-top: 4px;
+  color: var(--no-primary-color);
+  padding: 12px 15px;
+}
+
