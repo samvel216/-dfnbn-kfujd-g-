@@ -1,0 +1,69 @@
+.clients-section {
+    padding: 60px 0px;
+}
+.clients-title {
+    font-family: "Roboto", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+.clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+
+    & .link {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 210px;
+     height: 92px;
+     border: 1px solid var(--icon-fill);
+     border-radius: 4px;
+    }
+    & .link:hover,
+    & .link:focus {
+        border-color: var(--nav-color);
+    } 
+    & .link:hover .clients-icon,
+    & .link:focus .clients-icon {
+        fill: var(--nav-color);
+    }
+    & .item:nth-child(2n) {
+     margin-left: 30px;
+    }
+    & .item:nth-child(-n+4) {
+        margin-bottom: 30px;
+    }
+}
+.clients-icon-1 {
+    width: 45px;
+    height: 50px;
+}
+.clients-icon-2 {
+    width: 40px;
+    height: 52px;
+}
+.clients-icon-3 {
+    width: 41px;
+    height: 42px;
+}
+.clients-icon-4 {
+    width: 80px;
+    height: 42px;
+}
+.clients-icon-5 {
+    width: 59px;
+    height: 47px;
+}
+.clients-icon-6 {
+    width: 89px;
+    height: 45px;
+}
+.clients-icon {
+    fill: var(--icon-fill);
+}
+

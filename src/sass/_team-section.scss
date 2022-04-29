@@ -1,0 +1,76 @@
+
+.team-section {
+    padding: 60px 0px;
+    background-color: var(--dignity-item);
+}
+.team-main-title {
+    font-family: Roboto;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 33px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.team-list .item {
+    margin-bottom: 30px;
+}
+.team-list .item:last-child {
+    margin: 0px;
+}
+.team-card-container {
+    background-color: var(--white);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+.team-name {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding: 30px 0px 10px 0px;
+}
+.team-text {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: var(--no-primary-color);
+    text-align: center;
+    margin-bottom: 16px;
+}
+.team-card-list {
+    display: flex;
+    justify-content: center;
+}
+.team-card-list .link {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.team-card-list .link:hover,
+.team-card-list .link:focus {
+    background-color: var(--nav-color);
+}
+.team-card-list .link:hover .team-card-icon,
+.team-card-list .link:focus .team-card-icon {
+    fill: var(--white);
+}
+.team-card-list .item {
+    margin-right: 10px;
+}
+.team-card-list .item:last-child {
+    margin-right: 0px;
+}
+.team-card-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--icon-fill);
+}

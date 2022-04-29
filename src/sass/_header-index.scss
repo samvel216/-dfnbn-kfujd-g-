@@ -1,0 +1,37 @@
+.header-logo {
+font-family: 'Raleway';
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0.03em;
+text-align: left;
+text-decoration: none;
+color: var(--nav-color);
+}
+.header-logo-span {
+font-family: 'Oleo Script';
+font-size: 24px;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: 0.03em;
+text-align: left;
+color: var(--primary-color);
+}
+.header-icon {
+ display: inline-block;
+ width: 24px;
+ height: 16px;
+}
+.header-link-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

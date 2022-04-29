@@ -1,0 +1,57 @@
+:root {
+    --primary-color: #212121;
+    --no-primary-color: #757575;
+    --nav-color: #2196f3;
+    --white: #ffffff;
+    --background: #2f303a;
+    --white-tel-em: rgba(255, 255, 255, 0.6);
+    --border-color: #ececec;
+    --items-color: #eeeeee;
+    --icon-fill: #afb1b8;
+    --dignity-item: #F5F4FA;
+    --footer-nav-color:  #FFFFFF99;
+    --footer-icon-background: #FFFFFF1A;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0px;
+}
+p {
+    margin: 0px;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0px;
+  }
+.container {
+   width: 100%; 
+   padding:  0px 15px;
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        width: 480px;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .container {
+        width: 768px;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}

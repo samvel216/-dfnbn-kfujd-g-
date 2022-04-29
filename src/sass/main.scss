@@ -4,4 +4,10 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './base-styles';
+@import './header-index';
+@import './hero-section';
+@import './dignity-section';
+@import "./team-section";
+@import "./clients-section";
+@import "./footer-index";

@@ -1,0 +1,38 @@
+.dignity-section {
+    padding: 60px 0px;
+}
+.dignity-list-icon .item {
+    margin-bottom: 30px;
+}
+.dignity-list-icon .item:last-child {
+    margin-bottom: 0px;
+}
+.dignity-list-title {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+}
+.dignity-list-text {
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+.dignity-svg-icon {
+    width: 70px;
+    height: 70px;
+}
+.dignity-icon-container {
+    background-color: var(--dignity-item);
+    width: 450px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
